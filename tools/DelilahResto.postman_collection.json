@@ -1,0 +1,496 @@
+{
+	"info": {
+		"_postman_id": "8adb3663-c888-4eec-89c2-5a2d1c2b67ce",
+		"name": "DelilahResto",
+		"description": "Proyecto Acámica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"Anita\",\r\n    \"password\": \"hola\",\r\n    \"nombre_completo\": \"Ana Bringas\",\r\n    \"email\": \"anita@gmail.com\",\r\n    \"telefono\": \"351654000\",\r\n    \"direccion\": \"Recta Martinolli199\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3080/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear administrador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"admin1\",\r\n    \"password\": \"admin123\",\r\n    \"nombre_completo\": \"Administrador\",\r\n    \"email\": \"administrador1@gmail.com\",\r\n    \"telefono\": \"3515123456\",\r\n    \"direccion\": \"General Paz\",\r\n    \"administrador\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3080/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login usuario",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"Anita\",\r\n    \"password\": \"hola\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login administrador",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": \"admin1\",\r\n    \"password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Usuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lX3VzdWFyaW8iOiJhZG1pbjEiLCJpZF91c3VhcmlvIjoyLCJhZG1pbmlzdHJhZG9yIjoxLCJpYXQiOjE2MDQ2MjA4OTJ9.vv_3BzLhuKy26XBni06LTatEyiiiI9-7uiN65sSKleE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3080/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Productos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lX3VzdWFyaW8iOiJhZG1pbjEiLCJpZF91c3VhcmlvIjoyLCJhZG1pbmlzdHJhZG9yIjoxLCJpYXQiOjE2MDQ2MjA4OTJ9.vv_3BzLhuKy26XBni06LTatEyiiiI9-7uiN65sSKleE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3080/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar producto (Solo admin)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lX3VzdWFyaW8iOiJhZG1pbjEiLCJpZF91c3VhcmlvIjoyLCJhZG1pbmlzdHJhZG9yIjoxLCJpYXQiOjE2MDQ2MjA4OTJ9.vv_3BzLhuKy26XBni06LTatEyiiiI9-7uiN65sSKleE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre_producto\": \"Milanesa napolitana\",\r\n    \"precio\": 200,\r\n    \"descripcion\": \"Milanesa a la pizza\",\r\n    \"item\": \"Milnap\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3080/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar producto por id (Solo admin)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lX3VzdWFyaW8iOiJhZG1pbjEiLCJpZF91c3VhcmlvIjoyLCJhZG1pbmlzdHJhZG9yIjoxLCJpYXQiOjE2MDQ2MjA4OTJ9.vv_3BzLhuKy26XBni06LTatEyiiiI9-7uiN65sSKleE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3080/productos/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"productos",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar producto por id (Solo admin)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lX3VzdWFyaW8iOiJhZG1pbjEiLCJpZF91c3VhcmlvIjoyLCJhZG1pbmlzdHJhZG9yIjoxLCJpYXQiOjE2MDQ2MjA4OTJ9.vv_3BzLhuKy26XBni06LTatEyiiiI9-7uiN65sSKleE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Milanesa napolitana\",\r\n    \"precio\": 280,\r\n    \"descripcion\": \"Milanesa a la pizza\",\r\n    \"item\": \"Milnap\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3080/productos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"productos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generar pedido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lX3VzdWFyaW8iOiJhZG1pbjEiLCJpZF91c3VhcmlvIjoyLCJhZG1pbmlzdHJhZG9yIjoxLCJpYXQiOjE2MDQ2MjA4OTJ9.vv_3BzLhuKy26XBni06LTatEyiiiI9-7uiN65sSKleE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario\": 1,\r\n    \"descripcion\": [\r\n        {\r\n            \"producto\": 3,\r\n            \"cantidad\": 1\r\n        },\r\n        {\r\n            \"producto\": 4,\r\n            \"cantidad\": 1\r\n        },\r\n         {\r\n            \"producto\": 2,\r\n            \"cantidad\": 2\r\n        }\r\n    ],\r\n    \"metodo_pago\": \"efectivo\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3080/pedidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista pedidos (Solo admin)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lX3VzdWFyaW8iOiJhZG1pbjEiLCJpZF91c3VhcmlvIjoyLCJhZG1pbmlzdHJhZG9yIjoxLCJpYXQiOjE2MDQ2MjA4OTJ9.vv_3BzLhuKy26XBni06LTatEyiiiI9-7uiN65sSKleE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3080/pedidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista pedido por id usuario (Solo admin y usuario id)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lX3VzdWFyaW8iOiJhZG1pbjEiLCJpZF91c3VhcmlvIjoyLCJhZG1pbmlzdHJhZG9yIjoxLCJpYXQiOjE2MDQ2MjA4OTJ9.vv_3BzLhuKy26XBni06LTatEyiiiI9-7uiN65sSKleE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3080/pedidos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"pedidos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar pedido por id (Solo admin)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lX3VzdWFyaW8iOiJhZG1pbjEiLCJpZF91c3VhcmlvIjoyLCJhZG1pbmlzdHJhZG9yIjoxLCJpYXQiOjE2MDQ2MjA4OTJ9.vv_3BzLhuKy26XBni06LTatEyiiiI9-7uiN65sSKleE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3080/pedidos/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"pedidos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar estado del pedido por idpedido (Solo admin)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lX3VzdWFyaW8iOiJhZG1pbjEiLCJpZF91c3VhcmlvIjoyLCJhZG1pbmlzdHJhZG9yIjoxLCJpYXQiOjE2MDQ2MjA4OTJ9.vv_3BzLhuKy26XBni06LTatEyiiiI9-7uiN65sSKleE"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"estado\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3080/pedidos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3080",
+					"path": [
+						"pedidos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
