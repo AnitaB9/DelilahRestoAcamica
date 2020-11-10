@@ -46,13 +46,13 @@ Key: Authorization Value: Bearer (colocar token generado al momento de crear el 
 --> RUTAS
 
 USUARIOS
-Crear ssuario
+Crear usuario
 Crear administrador
 Login usuario
-Lista Usuarios (Solo adminitrador) REQUIERE TOKEN
+Lista Usuarios (Solo adminitrador) Requiere Token
 
-PRODUCTOS (REQUIEREN TOKEN)
-Lista roductos
+PRODUCTOS (Requiere Token)
+Lista productos
 Agregar producto (Solo admin)
 Eliminar producto por id (solo admin)
 Editar producto por id (solo admin)
@@ -61,5 +61,5 @@ PEDIDOS (REQUIERE TOKEN)
 Generar pedido
 Lista pedidos (solo admin)
 Lista pedidos por id (solo admin y usuario del id)
-Borrar edido por id (Solo admin)
-Actualizar estado del edido por idedido (solo admin)
+Borrar pedido por id (Solo admin)
+Actualizar estado del pedido por idpedido (solo admin)
